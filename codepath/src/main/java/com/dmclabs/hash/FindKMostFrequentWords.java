@@ -1,4 +1,4 @@
-package com.dmclabs.queues;
+package com.dmclabs.hash;
 
 import java.util.*;
 import java.util.stream.Collectors;
