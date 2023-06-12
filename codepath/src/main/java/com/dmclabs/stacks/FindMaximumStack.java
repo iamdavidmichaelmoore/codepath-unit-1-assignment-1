@@ -1,6 +1,9 @@
 package com.dmclabs.stacks;
 
 import java.util.Deque;
+
+import com.dmclabs.stacks.components.Block;
+
 import java.util.ArrayDeque;
 
 public class FindMaximumStack {
@@ -8,7 +11,6 @@ public class FindMaximumStack {
 
     public FindMaximumStack() {
         stack = new ArrayDeque<>();
-       
     }
 
     public int findMax() {

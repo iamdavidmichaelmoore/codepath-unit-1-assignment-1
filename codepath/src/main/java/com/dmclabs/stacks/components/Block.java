@@ -1,4 +1,4 @@
-package com.dmclabs.stacks;
+package com.dmclabs.stacks.components;
 
 public class Block {
     private int value;
