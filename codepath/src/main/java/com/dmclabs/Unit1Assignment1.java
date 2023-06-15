@@ -1,6 +1,10 @@
 package com.dmclabs;
 
+import java.util.*;
+import java.util.stream.*;
+
 import com.dmclabs.hash.FindKMostFrequentWords;
+import com.dmclabs.hash.NextGreaterElement1;
 import com.dmclabs.stacks.FindMaximumStack;
 import com.dmclabs.stacks.PostfixToInfix;
 
@@ -14,13 +18,14 @@ public class Unit1Assignment1
     {
         //SECTION - Execute Stacks
         // Unit1Assignment1.findMaxStack();
-        Unit1Assignment1.postfixToInfix();
+        // Unit1Assignment1.postfixToInfix();
         
         //SECTION - Execute Queues
         
         
         //SECTION - Execute Hash Tables
         // Unit1Assignment1.findKMostFrequentWords();
+        Unit1Assignment1.nextGreaterElement();
     }
 
     //SECTION - Stacks Functions
@@ -51,5 +56,19 @@ public class Unit1Assignment1
         String[] wordsArray = someWords.split(" ");
         FindKMostFrequentWords words  = new FindKMostFrequentWords(wordsArray);
         words.countWords();
+    }
+
+    public static void nextGreaterElement() {
+        NextGreaterElement1 mgeMap1 = new NextGreaterElement1(new int[]{4,1,2}, new int[]{1,3,4,2});
+        List<Object> list1 = Arrays.stream(mgeMap1.find())
+            .boxed()
+            .collect(Collectors.toList());
+        System.out.println(list1);
+
+        NextGreaterElement1 mgeMap2 = new NextGreaterElement1(new int[]{2,4}, new int[]{1,2,3,4});
+        List<Object> list2 = Arrays.stream(mgeMap2.find())
+            .boxed()
+            .collect(Collectors.toList());
+        System.out.println(list2);
     }
 }
